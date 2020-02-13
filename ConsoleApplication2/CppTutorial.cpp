@@ -53,6 +53,9 @@ void pasingByReferenceTest(int &a, int &b, int &c) {
 	c *= 2;
 }
 
+string creatingNewObjectWithoutCopyingComponents(const string &text1, const string &text2) {
+	return text1 + text2;
+}
 
 int main() {
 //	//cout << shouldReturnIsSmaller() << endl;
@@ -63,5 +66,8 @@ int main() {
 	cout << "x: " << x << ", y: " << y << ", z: " << z << endl;
 	rangeBasedLoop();
 	rangeBasedLoopWithAuto();
+
+	cout << "result of adding two strings: " << creatingNewObjectWithoutCopyingComponents("Text1", "Text2") << endl;
+
 	return 0;
 }
