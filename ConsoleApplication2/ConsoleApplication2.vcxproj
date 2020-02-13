@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="CppTutorial.cpp" />
     <ClCompile Include="DeleteOperator.cpp" />
+    <ClCompile Include="PointersToFunctions.cpp" />
     <ClCompile Include="Tutorial.cpp" />
   </ItemGroup>
   <ItemGroup>

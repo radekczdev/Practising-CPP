@@ -83,36 +83,36 @@ void usingVoidPointers(void *input, int inputTypeSize) {
 	}
 }
 
-int main() {
-//	//cout << shouldReturnIsSmaller() << endl;
-//	//shouldPrintOneWordFromInputString();
-//	//shouldPrintAllWordsFromInputString();
-	//int x = 2, y = 4, z = 8;
-	//pasingByReferenceTest(x, y, z);
-	//cout << "x: " << x << ", y: " << y << ", z: " << z << endl;
-	//rangeBasedLoop();
-	//rangeBasedLoopWithAuto();
-
-	//cout << "result of adding two strings: " << creatingNewObjectWithoutCopyingComponents("Text1", "Text2") << endl;
-
-	//cout << defaultParameterValue("one") << endl;
-	//cout << defaultParameterValue("two", "custom") << endl;
-
-	/*cout << "Testing recurrency. Result for factorial of: " << endl;
-	try {
-		for (int i = 9; i > -2; i--) {
-			cout << i << ": " << factorial(i) << endl;
-		}
-	} catch (exception& e) {
-		cout << e.what() << endl;
-	};*/
-
-	string input1 = "Heyy! ";
-	int input2 = 0;
-	usingVoidPointers(&input1, sizeof(input1));
-	usingVoidPointers(&input2, sizeof(input2));
-	cout << "result of using string as input: " << input1 << endl;
-	cout << "result of using int as input: " << input2 << endl;
-
-	return 0;
-}
+//int main() {
+////	//cout << shouldReturnIsSmaller() << endl;
+////	//shouldPrintOneWordFromInputString();
+////	//shouldPrintAllWordsFromInputString();
+//	//int x = 2, y = 4, z = 8;
+//	//pasingByReferenceTest(x, y, z);
+//	//cout << "x: " << x << ", y: " << y << ", z: " << z << endl;
+//	//rangeBasedLoop();
+//	//rangeBasedLoopWithAuto();
+//
+//	//cout << "result of adding two strings: " << creatingNewObjectWithoutCopyingComponents("Text1", "Text2") << endl;
+//
+//	//cout << defaultParameterValue("one") << endl;
+//	//cout << defaultParameterValue("two", "custom") << endl;
+//
+//	/*cout << "Testing recurrency. Result for factorial of: " << endl;
+//	try {
+//		for (int i = 9; i > -2; i--) {
+//			cout << i << ": " << factorial(i) << endl;
+//		}
+//	} catch (exception& e) {
+//		cout << e.what() << endl;
+//	};*/
+//
+//	string input1 = "Heyy! ";
+//	int input2 = 0;
+//	usingVoidPointers(&input1, sizeof(input1));
+//	usingVoidPointers(&input2, sizeof(input2));
+//	cout << "result of using string as input: " << input1 << endl;
+//	cout << "result of using int as input: " << input2 << endl;
+//
+//	return 0;
+//}
