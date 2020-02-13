@@ -61,19 +61,37 @@ string defaultParameterValue(string a, string b = "default") {
 	return "This function got " + a + " parameter(s). It is " + b + " value";
 }
 
+long factorial(long number) {
+	if (number < 0) {
+		throw invalid_argument("ERROR: Number must be >= 0");
+	} else if(number < 2) {
+		return number;
+	}
+	return number * factorial(number-1);
+}
+
 int main() {
 //	//cout << shouldReturnIsSmaller() << endl;
 //	//shouldPrintOneWordFromInputString();
 //	//shouldPrintAllWordsFromInputString();
-	int x = 2, y = 4, z = 8;
-	pasingByReferenceTest(x, y, z);
-	cout << "x: " << x << ", y: " << y << ", z: " << z << endl;
-	rangeBasedLoop();
-	rangeBasedLoopWithAuto();
+	//int x = 2, y = 4, z = 8;
+	//pasingByReferenceTest(x, y, z);
+	//cout << "x: " << x << ", y: " << y << ", z: " << z << endl;
+	//rangeBasedLoop();
+	//rangeBasedLoopWithAuto();
 
-	cout << "result of adding two strings: " << creatingNewObjectWithoutCopyingComponents("Text1", "Text2") << endl;
+	//cout << "result of adding two strings: " << creatingNewObjectWithoutCopyingComponents("Text1", "Text2") << endl;
 
-	cout << defaultParameterValue("one") << endl;
-	cout << defaultParameterValue("two", "custom") << endl;
+	//cout << defaultParameterValue("one") << endl;
+	//cout << defaultParameterValue("two", "custom") << endl;
+
+	cout << "Testing recurrency. Result for factorial of: " << endl;
+	try {
+		for (int i = 9; i > -2; i--) {
+			cout << i << ": " << factorial(i) << endl;
+		}
+	} catch (exception& e) {
+		cout << e.what() << endl;
+	};
 	return 0;
 }
