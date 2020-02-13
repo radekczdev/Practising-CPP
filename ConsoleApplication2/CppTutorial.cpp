@@ -70,6 +70,19 @@ long factorial(long number) {
 	return number * factorial(number-1);
 }
 
+void usingVoidPointers(void *input, int inputTypeSize) {
+	if (inputTypeSize == sizeof(string)) {
+		string *result;
+		result = (string*)input;
+		*result += "True story!";
+	}
+	else if(inputTypeSize == sizeof(int)) {
+		int *result = 0;
+		result = (int*)input;
+		(*result)++;
+	}
+}
+
 int main() {
 //	//cout << shouldReturnIsSmaller() << endl;
 //	//shouldPrintOneWordFromInputString();
@@ -85,13 +98,21 @@ int main() {
 	//cout << defaultParameterValue("one") << endl;
 	//cout << defaultParameterValue("two", "custom") << endl;
 
-	cout << "Testing recurrency. Result for factorial of: " << endl;
+	/*cout << "Testing recurrency. Result for factorial of: " << endl;
 	try {
 		for (int i = 9; i > -2; i--) {
 			cout << i << ": " << factorial(i) << endl;
 		}
 	} catch (exception& e) {
 		cout << e.what() << endl;
-	};
+	};*/
+
+	string input1 = "Heyy! ";
+	int input2 = 0;
+	usingVoidPointers(&input1, sizeof(input1));
+	usingVoidPointers(&input2, sizeof(input2));
+	cout << "result of using string as input: " << input1 << endl;
+	cout << "result of using int as input: " << input2 << endl;
+
 	return 0;
 }
