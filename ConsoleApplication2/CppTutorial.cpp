@@ -57,6 +57,10 @@ string creatingNewObjectWithoutCopyingComponents(const string &text1, const stri
 	return text1 + text2;
 }
 
+string defaultParameterValue(string a, string b = "default") {
+	return "This function got " + a + " parameter(s). It is " + b + " value";
+}
+
 int main() {
 //	//cout << shouldReturnIsSmaller() << endl;
 //	//shouldPrintOneWordFromInputString();
@@ -69,5 +73,7 @@ int main() {
 
 	cout << "result of adding two strings: " << creatingNewObjectWithoutCopyingComponents("Text1", "Text2") << endl;
 
+	cout << defaultParameterValue("one") << endl;
+	cout << defaultParameterValue("two", "custom") << endl;
 	return 0;
 }
