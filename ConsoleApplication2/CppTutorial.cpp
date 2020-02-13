@@ -36,6 +36,7 @@ void rangeBasedLoop() {
 	for (char c : str) {
 		cout << "[" << c << "]";
 	}
+	cout << endl;
 }
 
 void rangeBasedLoopWithAuto() {
@@ -43,12 +44,23 @@ void rangeBasedLoopWithAuto() {
 	for (auto c : str) {
 		cout << "[" << c << "]";
 	}
+	cout << endl;
 }
+
+void pasingByReferenceTest(int &a, int &b, int &c) {
+	a *= 2;
+	b *= 2;
+	c *= 2;
+}
+
 
 int main() {
 //	//cout << shouldReturnIsSmaller() << endl;
 //	//shouldPrintOneWordFromInputString();
 //	//shouldPrintAllWordsFromInputString();
+	int x = 2, y = 4, z = 8;
+	pasingByReferenceTest(x, y, z);
+	cout << "x: " << x << ", y: " << y << ", z: " << z << endl;
 	rangeBasedLoop();
 	rangeBasedLoopWithAuto();
 	return 0;
