@@ -31,10 +31,25 @@ void shouldPrintAllWordsFromInputString() {
 	cout << name << endl;
 }
 
-//int main() {
+void rangeBasedLoop() {
+	string str = "Hello!";
+	for (char c : str) {
+		cout << "[" << c << "]";
+	}
+}
+
+void rangeBasedLoopWithAuto() {
+	string str = "Hello Auto Typing!";
+	for (auto c : str) {
+		cout << "[" << c << "]";
+	}
+}
+
+int main() {
 //	//cout << shouldReturnIsSmaller() << endl;
 //	//shouldPrintOneWordFromInputString();
 //	//shouldPrintAllWordsFromInputString();
-//
-//	return 0;
-//}
+	rangeBasedLoop();
+	rangeBasedLoopWithAuto();
+	return 0;
+}
