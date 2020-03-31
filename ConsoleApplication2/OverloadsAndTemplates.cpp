@@ -28,3 +28,8 @@ bool isGreaterThanZero(U number, string &result) {
 	result = stringStream.str();
 	return isGreater;
 }
+
+template <class U, int T>
+U decide() {
+	return T == 1;
+}

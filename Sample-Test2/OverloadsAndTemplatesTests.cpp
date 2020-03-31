@@ -32,7 +32,7 @@ TEST(ShouldUseTemplates, DoubleIsGreaterThanZero) {
 	double number = 1.5;
 	string expectedResult = "1.5 is greater than 0";
 	string result = "";
-	isGreaterThanZero(number, result);
+	isGreaterThanZero<double>(number, result);
 	ASSERT_EQ(expectedResult, result);
 }
 
@@ -41,5 +41,30 @@ TEST(ShouldUseTemplates, DoubleIsNotGreaterThanZero) {
 	string expectedResult = "-5.3 is not greater than 0";
 	string result = "";
 	isGreaterThanZero(number, result);
+	ASSERT_EQ(expectedResult, result);
+}
+
+TEST(ShouldUseTemplates, ShouldReturnFalseUsingFunctionTemplateArgument) {
+	bool expectedResult = false;
+	bool result;
+	result = decide<bool, 555>();
+	ASSERT_EQ(expectedResult, result);
+}
+TEST(ShouldUseTemplates, ShouldReturn0UsingFunctionTemplateArgument) {
+	int expectedResult = 0;
+	int result;
+	result = decide<int, 555>();
+	ASSERT_EQ(expectedResult, result);
+}
+TEST(ShouldUseTemplates, ShouldReturnTrueUsingFunctionTemplateArgument) {
+	bool expectedResult = true;
+	bool result;
+	result = decide<bool, 1>();
+	ASSERT_EQ(expectedResult, result);
+}
+TEST(ShouldUseTemplates, ShouldReturn1UsingFunctionTemplateArgument) {
+	int expectedResult = 1;
+	int result;
+	result = decide<int, 1>();
 	ASSERT_EQ(expectedResult, result);
 }
