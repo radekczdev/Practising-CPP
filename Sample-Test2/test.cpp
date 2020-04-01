@@ -2,6 +2,7 @@
 #include <iostream>
 #include "..\ConsoleApplication2\Tutorial.cpp"
 #include "..\WorkTesting\Functions.cpp"
+#include "..\WorkTesting\Time.cpp"
 
 using namespace std;
 using namespace Tutorial;
@@ -17,4 +18,10 @@ TEST(TestingStringstream, ShouldChangeStringToDecimal) {
 TEST(TestingWorkFunctions, ShouldReturnTrue) {
 	string inventorType = "PRT_MEM";
 	EXPECT_EQ(checkIfItemIsAMember(inventorType), true);
+}
+
+TEST(TestingTime, ShouldReturnCurrentTime) {
+	string expected = "";
+	string result = getCurrentTime();
+	EXPECT_EQ(expected, result);
 }

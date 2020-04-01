@@ -30,6 +30,9 @@
     <ClCompile Include="OverloadsAndTemplates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\WorkTesting\Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\WorkTesting\Functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
